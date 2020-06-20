@@ -1,6 +1,5 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shallow, mount } from 'enzyme';
 import App from './App';
 
 describe('App component', () => {
@@ -10,5 +9,15 @@ describe('App component', () => {
     const result = paragraph.text();
 
     expect(result).toBe('Jest & Enzyme testing');
+  });
+});
+
+describe('render nested component', () => {
+  it('rendering the App component', () => {
+    const wrapper = shallow(<App />);
+    const myComponent = wrapper.find('MyComponent');
+    const footer = wrapper.find('Footer');
+
+    expect(myComponent.exists() && footer.exists()).toBe(true);
   });
 });
