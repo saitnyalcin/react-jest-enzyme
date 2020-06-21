@@ -3,7 +3,7 @@ import React from 'react';
 import App from './App';
 
 describe('App component', () => {
-  it('rendering the App component', () => {
+  it('rendering the div header in App component', () => {
     const component = shallow(<App />);
     const paragraph = component.find('div.header');
     const result = paragraph.text();
@@ -13,11 +13,11 @@ describe('App component', () => {
 });
 
 describe('render nested component', () => {
-  it('rendering the App component', () => {
+  it('rendering the nested component inside the App component', () => {
     const wrapper = shallow(<App />);
-    const myComponent = wrapper.find('MyComponent');
-    const footer = wrapper.find('Footer');
+    const myComponent = wrapper.find('MyComponent').exists();
+    const footer = wrapper.find('Footer').exists();
 
-    expect(myComponent.exists() && footer.exists()).toBe(true);
+    expect(myComponent && footer).toBe(true);
   });
 });
