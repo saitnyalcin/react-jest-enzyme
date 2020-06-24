@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component snapshot the component snapshoting the App component 1`] = `ShallowWrapper {}`;
+
+exports[`App component snapshoting the App component 1`] = `ShallowWrapper {}`;
+
+exports[`rendering App component and its nested elements snapshot the App component 1`] = `ShallowWrapper {}`;
+
+exports[`rendering App component and its nested elements snapshoting the App component 1`] = `ShallowWrapper {}`;
+
+exports[`snapshot the component snapshoting the App component 1`] = `ShallowWrapper {}`;
